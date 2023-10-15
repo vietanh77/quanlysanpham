@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public interface ChiTietSanPhamRepository extends JpaRepository<ChiTietSanPham, UUID> {
 
-    @Query(value = "select * from chi_tiet_sp ctsp order by ctsp.giaNhap", nativeQuery = true)
+    @Query(value = "select * from chi_tiet_sp ctsp", nativeQuery = true)
     List<ChiTietSanPham> getAll();
 
     void deleteById(UUID id);

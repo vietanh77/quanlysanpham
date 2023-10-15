@@ -35,7 +35,7 @@
             <td>${l.sanPham.ten}</td>
             <td>${l.nhaSanXuat.ten}</td>
             <td>${l.mauSac.ten}</td>
-            <td>${l.dongSP.ten}</td>
+            <td>${l.dongSanPham.ten}</td>
             <td>${l.namBH}</td>
             <td>${l.moTa}</td>
             <td>${l.soLuongTon}</td>

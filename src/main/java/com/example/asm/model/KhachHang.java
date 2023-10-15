@@ -35,7 +35,6 @@ public class KhachHang {
     @NotBlank(message = "Không được để trống")
     private String ho;
 
-    @NotBlank(message = "Không được để trống")
     private Date ngaySinh;
 
     @NotBlank(message = "Không được để trống")
@@ -50,6 +49,6 @@ public class KhachHang {
     @NotBlank(message = "Không được để trống")
     private String quocGia;
 
-    @NotBlank(message = "Không được để trống")
+
     private String  matKhau;
 }

@@ -27,8 +27,8 @@
         <th scope="row">${sp.ma}</th>
         <th scope="row">${sp.ten}</th>
         <td>
-            <a href="/san-pham/delete/${sp.id}">delete</a>
-            <a href="/san-pham/view-update/${sp.id}">update</a>
+            <a class="btn btn-danger" href="/san-pham/delete/${sp.id}">delete</a>
+            <a class="btn btn-primary" href="/san-pham/view-update/${sp.id}">update</a>
         </td>
 
     </tr>

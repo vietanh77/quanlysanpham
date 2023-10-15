@@ -48,9 +48,9 @@
     <br>
     <br>
     DongSP:
-    <form:select class="form-control" path="dongSP">
+    <form:select class="form-control" path="dongSanPham">
         <c:forEach items="${listDongSP}" var="dsp">
-            <form:option value="${dsp.id}" selected="${dsp.id==ctsp.dongSP.id?'selected':''}">
+            <form:option value="${dsp.id}" selected="${dsp.id==ctsp.dongSanPham.id?'selected':''}">
                 ${dsp.ten}
             </form:option>
         </c:forEach>

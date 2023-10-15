@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("san-pham")
+@RequestMapping("/san-pham")
 public class SanPhamConTroller {
     @Autowired
     SanPhamService sanPhamService;
@@ -18,7 +18,7 @@ public class SanPhamConTroller {
     @GetMapping("/hien-thi")
     public String hienThi(Model model) {
         model.addAttribute("listSP", sanPhamService.getAll());
-        return "san-pham/sanPham";
+        return "san-pham/sanpham";
     }
 
     @GetMapping("/view-add")

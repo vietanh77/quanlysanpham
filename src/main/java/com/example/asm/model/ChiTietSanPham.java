@@ -2,12 +2,7 @@ package com.example.asm.model;
 
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -16,6 +11,7 @@ import java.util.UUID;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Getter
 @Setter
 public class ChiTietSanPham {
@@ -24,31 +20,29 @@ public class ChiTietSanPham {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
     @ManyToOne
-    @JoinColumn(name = "idSP")
+    @JoinColumn(name = "id_sp")
     private SanPham sanPham;
     @ManyToOne
-    @JoinColumn(name = "idNsx")
+    @JoinColumn(name = "id_nsx")
     private Nsx nhaSanXuat;
     @ManyToOne
-    @JoinColumn(name = "idMauSac")
+    @JoinColumn(name = "id_mau_sac")
     private MauSac mauSac;
 
     @ManyToOne
-    @JoinColumn(name = "idDongSP")
+    @JoinColumn(name = "id_dong_sp")
     private DongSanPham dongSanPham;
 
-    @NotNull(message = "Không được để trống")
-    private int namBH;
+    @Column(name = "nam_bh")
+    private Integer namBH;
 
-    @NotBlank(message = "Không được để trống")
+
     private String moTa;
 
-    @NotNull(message = "Không được để trống")
-    private int soLuongTon;
 
-    @NotNull(message = "Không được để trống")
-    private BigDecimal GiaNhap;
+    private Integer soLuongTon;
 
-    @NotNull(message = "Không được để trống")
+    private BigDecimal giaNhap;
     private BigDecimal giaBan;
+
 }

@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("khach-hang")
+@RequestMapping("/khach-hang")
 public class KhachHangController {
     @Autowired
     KhachHangService khachHangService;
     @GetMapping("/hien-thi")
     public String hienThi(Model model) {
         model.addAttribute("listKH", khachHangService.getAll());
-        return "khach-hang/khachHang";
+        return "khach-hang/khachhang";
     }
 
     @GetMapping("/view-add")
     public String viewAdd(Model model) {
-        model.addAttribute("khachHang", new KhachHangController());
+        model.addAttribute("khachHang", new KhachHang());
         return "khach-hang/add";
     }
 
